@@ -1,0 +1,38 @@
+{
+  "cooldown_minutes": 15,
+  "minimum_severity": "warning",
+  "alerts": [
+    {
+      "alert_id": "checkout-001",
+      "service": "checkout",
+      "alert_name": "HighErrorRate",
+      "severity": "warning",
+      "timestamp": "2026-08-22T10:00:00Z",
+      "message": "5xx rate exceeded 5 percent"
+    },
+    {
+      "alert_id": "checkout-002",
+      "service": "checkout",
+      "alert_name": "HighErrorRate",
+      "severity": "warning",
+      "timestamp": "2026-08-22T10:04:00Z",
+      "message": "5xx rate exceeded 5 percent"
+    },
+    {
+      "alert_id": "checkout-003",
+      "service": "checkout",
+      "alert_name": "HighErrorRate",
+      "severity": "warning",
+      "timestamp": "2026-08-22T10:16:00Z",
+      "message": "5xx rate exceeded 5 percent"
+    },
+    {
+      "alert_id": "checkout-004",
+      "service": "checkout",
+      "alert_name": "DebugSignal",
+      "severity": "info",
+      "timestamp": "2026-08-22T10:05:00Z",
+      "message": "verbose diagnostic event"
+    }
+  ]
+}
