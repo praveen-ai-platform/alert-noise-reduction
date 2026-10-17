@@ -67,3 +67,7 @@ class AlertTests(unittest.TestCase):
         response=self.client.post('/reduce-alert-noise',json={'alerts':[alert(severity='secret-value')]})
         self.assertEqual(response.status_code,422)
         self.assertNotIn('secret-value',response.text)
+
+    def test_openapi_documents_api_key(self):
+        schema=self.client.get('/openapi.json').json()
+        self.assertEqual(schema['components']['securitySchemes']['APIKeyHeader']['name'],'X-API-Key')
